@@ -16,6 +16,7 @@ bool ehPrimo(int n){
 }
 
 int main(){
+    setlocale(LC_ALL, "Portuguese");
     int num1, num2;
 
     printf("Digite um número inicial para o intervalo: ");
