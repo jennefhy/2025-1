@@ -1,19 +1,16 @@
-#include<locale.h>
-#include<stdio.h>
+#include <stdio.h>
 
-int f(int n){
+int f(int n) {
     if (n <= 1)
         return 1;
-else 
-    return f(n-1) + f(n-2);
+    else
+        return f(n - 1) + f(n - 2);
 }
 
-int main(){
-    setlocale(LC_ALL, "Portuguese");
-
+int main() {
     int n;
-    printf("Digite o valor de n: ")
+    printf("Digite um valor inteiro: ");
     scanf("%d", &n);
-    printf("x(%d) = %d\n", n, f);
+    printf("f(%d) = %d\n", n, f(n));
     return 0;
 }
