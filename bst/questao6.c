@@ -99,7 +99,7 @@ int somaValores(No* T) {
     return T->dado + somaValores(T->esquerdo) + somaValores(T->direito);
 }
 
-//Nível de um nó (igual à profundidade)
+//Nível de um nó (igual a profundidade)
 int nivel(No* T, int c) {
     return profundidade(T, c, 0);
 }

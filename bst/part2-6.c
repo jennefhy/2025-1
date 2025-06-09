@@ -1,6 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
 
 typedef struct Aluno {
     char nome[50];
@@ -10,16 +10,16 @@ typedef struct Aluno {
     struct Aluno* direito;
 } Aluno;
 
-Aluno* buscarPorNome(Aluno* raiz, const char* nome) {
+Aluno* buscarNome(Aluno* raiz, const char* nome) {
     if (raiz == NULL)
         return NULL;
     int resul = strcmp(nome, raiz->nome);
     if (resul == 0)
         return raiz;
     else if (resul < 0)
-        return buscarPorNome(raiz->esquerdo, nome);
+        return buscarNome(raiz->esquerdo, nome);
     else
-        return buscarPorNome(raiz->direito, nome);
+        return buscarNome(raiz->direito, nome);
 }
 
 void somaNotasEContar(Aluno* raiz, float* soma, int* contador) {
